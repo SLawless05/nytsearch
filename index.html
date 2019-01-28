@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nyt</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <h1 class="display-4"><i class="fas fa-newspaper"></i> New York Times Search</h1>
+        </div>
+        <form>
+            <div class="card card-header">
+                <p><b><i class="far fa-calendar-alt"></i> Search Parameters</b></p>
+                <hr>
+                <div class="form-group">
+                    <label for="search-input">Search Term</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="form-group">
+                    <label for="amount-input">Number of Records to Retrieve</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="start-year-input">Start Year (Optional)</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="form-group">
+                    <label for="end-year-input">End Year (Optional)</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div>
+                    <button id="submit" class="btn btn-primary"><i class="fas fa-search"> Search</i></button>
+                    <button id="reset" class="btn btn-primary"><i class="fas fa-trash-alt"></i> Clear Results</button>
+                </div>
+            </div>
+        </form>
+        <br>
+        <form>
+            <div class="card card-header">
+                <p><b><i class="far fa-calendar-alt"></i> Top Articles</b></p>
+                <div id="articles"></div>
+            </div>
+        </form>
+        <hr>
+        <p id="p01">Made with lots & lots of &#9829;</p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            $("#submit").on("click", function () {
+                var query = $("#search-input").val();
+                var artNum = $("#amount-input").val();
+                var startDate = $("#start-year-input").val();
+                var endDate = $("#end-year-input").val();
+
+                var artNum = $("number-of-docs").attr()
+                var search = $(this).attr(text);
+                var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + "&limit=10&api-key=q9onEf5Yb5GyvO0jnMerTvTT1VCmlVSA"
+            });
+
+
+
+
+            // var artNum = 
+
+            // =
+            //  var artNum = $("number-of-docs").attr( )
+            //  var search = $(this).attr(text);
+            //  var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + "&limit=10&api-key=q9onEf5Yb5GyvO0jnMerTvTT1VCmlVSA"
+
+            //     $.ajax({
+            //       url: queryURL,
+            //       method: "GET"
+            //     }).then(function(response) {
+            //     console.log(response.headline.main)
+
+            //         for (var i = 0; i > artNum; i++) {
+            //         var artDiv = $("<div>");
+
+
+
+
+
+            //  }
+
+
+            // });
+
+            $("#reset").on("click", function () {
+                articles.empty();
+            });
+        </script>
+</body>
+
+</html>
